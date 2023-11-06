@@ -6,7 +6,6 @@ import { RecipeState } from "../context/RecipeContext";
 const Search = ({ value, onChange }) => {
   const { searchQuery, setSearchQuery } = RecipeState();
 
-  // Create a debounced function for setting the search query
   const debouncedSetSearchQuery = debounce((newSearchQuery) => {
     setSearchQuery(newSearchQuery);
   });

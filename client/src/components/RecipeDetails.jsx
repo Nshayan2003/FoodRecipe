@@ -58,7 +58,7 @@ const RecipeDetails = ({ recipeId }) => {
           </ul>
         </>
       )}
-      {/* Check for errors */}
+
       {error && <p>Error fetching recipe details</p>}
     </div>
   );

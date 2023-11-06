@@ -8,12 +8,10 @@ const Recipe = ({ recipe }) => {
 
   const handleLike = async (id) => {
     try {
-      // Send the opposite value of the current isLike state to the server
       const response = await AxiosPrivate.patch(`/recipe/${id}/like`, {
         isLike: !isLike,
       });
 
-      // Update the isLike state based on the response from the server
       if (response.data.success) {
         setIsLike(!isLike);
       }
